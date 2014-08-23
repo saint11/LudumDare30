@@ -12,6 +12,7 @@ namespace Bones
     {
         private Spritemap<string> Sprite;
         private int Hp = 3;
+        private int ExtraLayer=0;
 
         public Enemy()
             :base(Vector2.Zero)
@@ -25,7 +26,7 @@ namespace Bones
         }
         public override void Update()
         {
-            Layer = -(int)Y;
+            Layer = -(int)Y + ExtraLayer;
         }
 
 
@@ -49,10 +50,35 @@ namespace Bones
         internal void Damage(int damage)
         {
             Hp -= damage;
-            if (Hp <= 0) RemoveSelf();
+            if (Hp <= 0) SetState(Die);
 
             Sprite.Scale = 1.3f;
             Tween(Sprite, new { ScaleX = 1, ScaleY = 1 }, 30).Ease(Ease.BounceOut);
         }
+
+        public override void Prerender()
+        {
+            float prev = Sprite.Alpha;
+            Sprite.Shader = Bones.Shader["solid"];
+            Sprite.Alpha = 0.75f * prev;
+            Sprite.Shader.SetParameter("color", Color.Black);
+            Sprite.Render(X, Y - 1);
+            //Sprite.Render(X, Y + 1);
+            Sprite.Render(X - 1, Y);
+            Sprite.Render(X + 1, Y);
+
+            Sprite.Shader = null;
+            Sprite.Alpha = prev;
+        }
+        private System.Collections.IEnumerator Die()
+        {
+            ExtraLayer = 100;
+            RemoveColliders(Collider);
+            Sprite.Play("die");
+            yield return 50;
+            Tween(Sprite, new { Alpha = 0 }, 200).OnComplete(() => { RemoveSelf(); });
+            yield return 0;
+        }
+
     }
 }

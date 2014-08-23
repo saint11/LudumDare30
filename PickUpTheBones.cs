@@ -19,7 +19,9 @@ namespace Bones
         public static Surface MainLayer;
         public static Surface HudLayer;
         public static Dictionary<string,Atlas> Atlas;
-        
+
+        public static Dictionary<string, Shader> Shader;
+
         //GlobalVars
         public static int TILEWIDTH = 32;
 
@@ -46,6 +48,10 @@ namespace Bones
             Atlas["interface"] = new Atlas( GAME_PATH + "Images/interface.xml");
             Atlas["units"] = new Atlas(GAME_PATH + "Images/units.xml");
             Atlas["tiles"] = new Atlas(GAME_PATH + "Images/tiles.xml");
+
+            //Shaders
+            Shader = new Dictionary<string, Shader>();
+            Shader["solid"] = new Shader(GAME_PATH + "Shaders/solid.frag");
 
             SpriteData.Init();
 

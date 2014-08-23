@@ -20,13 +20,13 @@ namespace Bones
 
             Camera = Add(new CameraController());
 
-            Add(new Ground() { Layer = 10 });
+            Add(new Ground() { Layer = 100 });
             Add(new Sky() { Layer = -100 });
             //Add(new Terrain("test"));
 
             OgmoProject og = new OgmoProject(Bones.GAME_PATH + "Maps/Bones.oep", Bones.GAME_PATH + "Images/");
             og.RegisterTag((int)Tags.Solid, "solid");
-            og.BaseTileDepth = 100;
+            og.BaseTileDepth = 10;
 
             og.LoadLevel(Bones.GAME_PATH + "Maps/test.oel", this);
 

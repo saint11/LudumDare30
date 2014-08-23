@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
-<!-- $TexturePacker:SmartUpdate:fd4f7cac171a36028b6b3f2301805a0f:4255a3d1b7b03918c605e7ed27588da0:8c35c81d6c02a4e8a52d04a540c911af$ -->
+<!-- $TexturePacker:SmartUpdate:f5ea704a33a465ecfe71a9aab96d42b0:149f32bf35dd4b2a79ea45dcf8e6c7b5:8c35c81d6c02a4e8a52d04a540c911af$ -->
 <TextureAtlas imagePath="tiles.png">
-    <SubTexture name="drawBigTile" x="104" y="2" width="32" height="26"/>
-    <SubTexture name="drawTile" x="70" y="2" width="32" height="26"/>
-    <SubTexture name="metal0" x="36" y="2" width="32" height="26"/>
-    <SubTexture name="metal1" x="138" y="2" width="46" height="24"/>
-    <SubTexture name="metalWall0" x="2" y="2" width="32" height="26"/>
-    <SubTexture name="solid" x="186" y="2" width="64" height="16"/>
+    <SubTexture name="Caves" x="2" y="2" width="256" height="32"/>
+    <SubTexture name="drawBigTile" x="104" y="36" width="32" height="26"/>
+    <SubTexture name="drawTile" x="70" y="36" width="32" height="26"/>
+    <SubTexture name="metal0" x="36" y="36" width="32" height="26"/>
+    <SubTexture name="metal1" x="138" y="36" width="46" height="24"/>
+    <SubTexture name="metalWall0" x="2" y="36" width="32" height="26"/>
+    <SubTexture name="solid" x="186" y="36" width="64" height="16"/>
 </TextureAtlas>

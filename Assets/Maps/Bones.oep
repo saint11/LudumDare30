@@ -26,6 +26,18 @@
   <ExportCameraPosition>false</ExportCameraPosition>
   <LevelValueDefinitions />
   <LayerDefinitions>
+    <LayerDefinition xsi:type="TileLayerDefinition">
+      <Name>tiles</Name>
+      <Grid>
+        <Width>32</Width>
+        <Height>32</Height>
+      </Grid>
+      <ScrollFactor>
+        <X>1</X>
+        <Y>1</Y>
+      </ScrollFactor>
+      <ExportMode>XMLCoords</ExportMode>
+    </LayerDefinition>
     <LayerDefinition xsi:type="GridLayerDefinition">
       <Name>solid</Name>
       <Grid>
@@ -51,7 +63,17 @@
       </ScrollFactor>
     </LayerDefinition>
   </LayerDefinitions>
-  <Tilesets />
+  <Tilesets>
+    <Tileset>
+      <Name>caves</Name>
+      <FilePath>..\Gfx\tiles\Caves.png</FilePath>
+      <TileSize>
+        <Width>32</Width>
+        <Height>32</Height>
+      </TileSize>
+      <TileSep>0</TileSep>
+    </Tileset>
+  </Tilesets>
   <EntityDefinitions>
     <EntityDefinition Name="Enemy" Limit="-1" ResizableX="false" ResizableY="false" Rotatable="false" RotateIncrement="15">
       <Size>

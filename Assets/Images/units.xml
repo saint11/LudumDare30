@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
-<!-- $TexturePacker:SmartUpdate:be56914c1b8f504148640492a27e882e:d95461dcb279267f90910618329fbe84:c3e4806e2e52c9c258a81d323f78c9c5$ -->
+<!-- $TexturePacker:SmartUpdate:cfb8f93970de476d8f4e6e1b72eb8d01:5ab3447248b2d66acf55ac3edc7e4062:c3e4806e2e52c9c258a81d323f78c9c5$ -->
 <TextureAtlas imagePath="units.png">
-    <SubTexture name="SoldierAttack" x="260" y="86" width="160" height="32"/>
-    <SubTexture name="crab" x="260" y="52" width="160" height="32"/>
+    <SubTexture name="CrabDie" x="260" y="52" width="192" height="32"/>
+    <SubTexture name="crab" x="2" y="260" width="256" height="160"/>
     <SubTexture name="slash" x="260" y="2" width="192" height="48"/>
     <SubTexture name="soldier" x="2" y="2" width="256" height="256"/>
 </TextureAtlas>

@@ -49,6 +49,8 @@ namespace Bones
                 else
                 {
                     Sprite.Play("idle");
+                    Movement.Speed.X *= 0.8f;
+                    Movement.Speed.Y *= 0.8f;
                 }
 
                 if (Controls.Attack.Pressed) SetState(Attacking);
@@ -60,6 +62,7 @@ namespace Bones
         {
             Movement.Freeze = true;
             Sprite.Play("attack");
+            yield return 2;
             Scene.Add(new Slash(X, Y-16, Angle, 0.8f, -0.8f*Side));
             yield return 8;
             Movement.Freeze = false;
@@ -71,6 +74,20 @@ namespace Bones
             Layer = -(int)Y;
         }
 
+        public override void Prerender()
+        {
+            float prev = Sprite.Alpha;
+            Sprite.Shader = Bones.Shader["solid"];
+            Sprite.Alpha = 0.75f * prev;
+            Sprite.Shader.SetParameter("color", Color.Black);
+            Sprite.Render(X, Y - 1);
+            //Sprite.Render(X, Y + 1);
+            Sprite.Render(X - 1, Y);
+            Sprite.Render(X + 1, Y);
+
+            Sprite.Shader = null;
+            Sprite.Alpha = prev;
+        }
         public override void Render()
         {
             //Collider.Render();

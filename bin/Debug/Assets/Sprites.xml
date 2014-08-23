@@ -16,7 +16,7 @@
     <Animations>
       <Anim name="idle" delay="20" frames="0-4"/>
       <Anim name="run" delay="7" frames="0-4"/>
-      <Anim name="attack" delay="7" frames="0-4"/>
+      <Anim name="die" delay="5" loop="false" frames="8-13"/>
     </Animations>
   </Sprite>
 
