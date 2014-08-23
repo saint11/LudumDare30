@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:37c43a067d50d04609444607c99e4f17:8ce36906d227a1fea9bf7bb000de7bb9:5d9064291e37900a2ef293ecf4c0111d$ -->
+<TextureAtlas imagePath="interface.png">
+    <SubTexture name="cursor" x="70" y="164" width="32" height="32"/>
+    <SubTexture name="portrait0" x="2" y="2" width="252" height="126"/>
+    <SubTexture name="selectedUnit" x="2" y="130" width="192" height="32"/>
+    <SubTexture name="tokens/hurt" x="36" y="198" width="32" height="32"/>
+    <SubTexture name="tokens/kill" x="36" y="164" width="32" height="32"/>
+    <SubTexture name="tokens/miss" x="2" y="198" width="32" height="32"/>
+    <SubTexture name="tokens/poison" x="2" y="164" width="32" height="32"/>
+    <SubTexture name="tokens/resist" x="196" y="130" width="32" height="32"/>
+</TextureAtlas>

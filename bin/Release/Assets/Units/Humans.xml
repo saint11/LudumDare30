@@ -1,0 +1,44 @@
+﻿<units>
+  <unit id="soldier">
+    <info>
+      <name>John Doe</name>
+      <image>soldier</image>
+      <portrait>dude</portrait>
+    </info>
+
+    <stats>
+      <attack>kill,hurt,hurt,hurt,miss</attack>
+      <defence>resist,miss</defence>
+      <will>3</will>
+      <wounds>0</wounds>
+      <actions>2</actions>
+    </stats>
+
+    <traits>
+      <trait>CloseCombatant</trait>
+    </traits>
+
+    <equip>
+      <weapon>GaussPistol</weapon>
+    </equip>
+  </unit>
+  
+  <unit id="scout">
+    <info>
+      <name>Fast Dude</name>
+      <image>soldier</image>
+      <portrait>dude</portrait>
+    </info>
+
+    <stats>
+      <attack>kill,hurt,hurt,miss</attack>
+      <defence>miss,miss,miss</defence>
+      <will>3</will>
+      <wounds>0</wounds>
+    </stats>
+    
+    <traits>
+      <trait>Sniper</trait>
+    </traits>
+  </unit>
+</units>

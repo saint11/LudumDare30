@@ -1,0 +1,15 @@
+C:\Users\saint11\Desktop\LD30\obj\Debug\LD30.csprojResolveAssemblyReference.cache
+C:\Users\saint11\Desktop\LD30\obj\Debug\JBlade.exe
+C:\Users\saint11\Desktop\LD30\bin\Debug\libsndfile-1.dll
+C:\Users\saint11\Desktop\LD30\bin\Debug\openal32.dll
+C:\Users\saint11\Desktop\LD30\bin\Debug\csfml-audio-2.dll
+C:\Users\saint11\Desktop\LD30\bin\Debug\csfml-graphics-2.dll
+C:\Users\saint11\Desktop\LD30\bin\Debug\csfml-window-2.dll
+C:\Users\saint11\Desktop\LD30\bin\Debug\Assets\Sprites.xml
+C:\Users\saint11\Desktop\LD30\bin\Debug\Assets\Testimonials.xml
+C:\Users\saint11\Desktop\LD30\bin\Debug\JBlade.exe.config
+C:\Users\saint11\Desktop\LD30\bin\Debug\JBlade.exe
+C:\Users\saint11\Desktop\LD30\bin\Debug\JBlade.pdb
+C:\Users\saint11\Desktop\LD30\bin\Debug\Otter.dll
+C:\Users\saint11\Desktop\LD30\bin\Debug\Otter.pdb
+C:\Users\saint11\Desktop\LD30\obj\Debug\JBlade.pdb

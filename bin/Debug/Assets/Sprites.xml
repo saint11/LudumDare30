@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Sprites>
+<!--Units-->
+  <Sprite name="soldier" atlas="units" texture="soldier">
+    <Size width="32" height="32"/>
+    <Origin x="16" y="32"/>
+    <Animations>
+      <Anim name="idle" delay="8" frames="0-5"/>
+      <Anim name="run" delay="5" frames="8-13"/>
+    </Animations>
+  </Sprite>
+</Sprites>

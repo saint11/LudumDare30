@@ -1,0 +1,24 @@
+﻿<units>
+  
+    <unit id="brute">
+      
+      <info>
+        <name>Brute</name>
+        <image>Brute</image>
+        <portrait>dude</portrait>
+      </info>
+
+      <stats>
+        <movement>3</movement>
+        <attack>kill,kill,hurt,miss</attack>
+        <defence>resist,resist</defence>
+        <will>3</will>
+        <wounds>0</wounds>
+      </stats>
+
+      <traits>
+        <trait>Strong</trait>
+      </traits>
+      
+    </unit>
+</units>

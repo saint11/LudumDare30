@@ -1,0 +1,445 @@
+<testimonials>
+
+ <!-- SEGURANÇA -->
+
+  <armadillo>
+
+    <cat>
+      <intro>
+        <t>Bom dia, inspetor. Em que posso ajudar nesta misteriosa investigação? </t>
+	<p>Bom dia, caro segurança.</p> 
+	<p>Por favor, fique a vontade. Eu gostaria de lhe mostrar alguns objetos de interesse.</p> 
+	<n>Esse grandão tem cara de quem não abre o jogo fácil… Muito bem, somos dois.</n> 
+      </intro>
+
+      <!-- Evidences -->
+
+      <evidenceHat>
+        <p>Peculiar esse chapéu, não? Acredito ser um modelo estrangeiro. Foi encontrado próximo a uma das estátuas da galeria principal. </p>
+	<t>Malditos estrangeiros, eu sabia que eles estavam envolvidos. </t>
+	<t>Li no jornal que nosso país anda recebendo cada vez mais visitantes dessa estirpe, tenho certeza que este chapéu pertence a um comunista. Co-mu-nis-ta!</t> 
+	<t photo="WisentPhoto">Não quero acusar ninguém, mas a última pessoa que vi saindo do museu ontem era um estrangeiro.</t> 
+	<n photo="WisentPhoto">Um estrangeiro visita um museu. No dia seguinte há uma ameaça de bomba. Será um caso de espionagem internacional?</n> 
+      </evidenceHat>
+
+      <evidenceMap>
+	<p>Esse mapa foi encontrado no chão próxima a loja de Souveniers. Contém anotações a respeito das galerias.</p>
+	<t photo="DeerPhoto">Sim, eu o encontrei ontem. Ele pertence a um homem chamado Rivaldo Meneghel, um frequentador assíduo da nossa galeria. Cara simpático, aparece quase todos os dias. </t>
+	<n photo="DeerPhoto">O Sr. Meneghel deve ter deixado o mapa cair sem querer. Mas anotações compulsivas desse calibre são obras para um lunático.</n>
+      </evidenceMap>
+
+      <evidenceWatch>
+	<p>Aqui temos um relógio de bolso recuperado por você, certo? Estava perdido dentro de uma fresta no banheiro masculino.</p>
+	<t>Sim, peguei quando um sujeito maltrapilho, um mendigo, tentando pegar esse relógio de dentro da tal fresta.</t> 
+	<t>Não sei de quem é, mas resolvi guardar - a maioria dos objetos perdidos no museu acaba ficando sob a minha guarda mesmo.</t>
+	<t>Me pareceu um objeto estranho. Tem algo a haver com a investigação? </t>
+	<n>Para alguém esquecer um objeto tão valioso em um lugar, esse alguém deve ter saído na pressa. Certamente está envolvido no caso… </n>
+      </evidenceWatch>
+
+      <evidenceKey>
+	<p>Esta chave estava desaparecida até ontem. O que você sabe sobre ela?</p>
+	<t>Olha, trabalho aqui a muito tempo, sei que recentemente um novo zelador foi contratado para cuidar das chaves. </t>
+	<t photo="OtterPhoto">A gente chama ele por Sérgio da Limpeza, mas ele é um novato, sabe, meio inexperiente. Deve ter deixado essa chave cair… e depois demorou pra encontrar de volta.</t>
+	<n photo="OtterPhoto"> Um zelador novo é contratado pouco antes de uma ameaça terrorista. Pra mim isso cheira a conspiração.</n>
+      </evidenceKey>
+
+      <evidenceFolder>
+	<p>Você já deve ter visto isso: é um folder da exposição atual.</p>
+	<t photo="AnteaterPhoto">Esse é o famoso Ludwig Von Pinto. Ele é o principal artista dessa exposição, mas já participou de outras antigamente, eu lembro bem.</t>
+	<t photo="AnteaterPhoto">Não entendo muito bem disso e também não gosto muito do estilo agressivo dele. Mas dessa vez parece que as esculturas dele tão é tradicionais. Tá meio que faltando algo.</t>
+	<n photo="AnteaterPhoto">Teria esse artista algum rival.?Talvez um história antiga? </n>
+      </evidenceFolder>
+
+      <bye>
+	<p>Certo, senhor segurança. Isso encerra as minhas perguntas por hora.</p>
+	<t>A disposição, inspetor.</t>
+      </bye>
+    </cat>
+
+    <dog>
+      <intro>
+        <t>Olá, inspetora! Lindo dia, não.</t>
+	<p>Bom dia, caro segurança. Preciso da sua ajuda para desvendar esse caso terrível. </p>
+	<n>Gosto do ar de confiança desse sujeito… acho que ele pode me ajudar.</n>
+      </intro>
+
+      <!-- Evidences -->
+      <evidenceHat>
+	<p>Esse chapéu foi encontrado no museu hoje, na exposição principal. Acha que ele tem ligação com atentado?</p>
+	<t>MALDITOS COMUNISTAS! MALDITOS ESTRANGEIROS!</t> 
+	<t>Inspetora: nosso museu constantemente recebe visitas desse pessoal de fora.</t>
+	<t photo="WisentPhoto">Ontem eu fiquei desconfiado de que um deles, um com cara de perdido, estava atento demais, olhando para todas as obras. </t>
+	<t photo="WisentPhoto">Quem sabe esse chapéu não era dele? Eu por mim nem deixava estrangeiro ficar contaminando a nossa cultura. </t>
+	<n photo="WisentPhoto">Pra atrair tanto comentário negativo, esse tal de Estrangeiro deve ser perigoso.</n>
+      </evidenceHat>
+
+      <evidenceMap>
+	<p>Esse mapa todo rabiscado: foi você que o encontrou perto da loja de Souvenirs, certo?</p>
+	<t photo="DeerPhoto">Parece meio esquisito, mas o dono desse mapa é um cara meio doido. O nome dele é Rivaldo Meneghel, um tipo que dá as caras praticamente todo dia, fica por horas vagando pelos corredores, falando sozinho...</t>
+	<n photo="DeerPhoto">Muito suspeito algum desequilibrado desses andando por aí e brincando de caça-ao-tesouro.</n>
+      </evidenceMap>
+
+      <evidenceWatch>
+	<p>Se não me engano você encontrou esse relógio jogado por aí também, não?</p>
+	<t>Vi um mendigo nojento dentro do museu tentando pegar alguma coisa e logo desconfiei. Hoje, com toda essa confusão, imagino que o dono desse relógio tenha algo a haver com essa bomba. Me dá até ruim olhar pra esse relógio, porque não me cheira bem.</t>
+	<n>Ora, é só um relógio, não entendi a desconfiança desse segurança...</n>
+      </evidenceWatch>
+
+      <evidenceKey>
+	<p>Veja: uma chave. Não é estranho ela ter desaparecido no dia anterior a essa confusão?</p>
+	<t photo="OtterPhoto">É culpa daquele novato, o Sérgio da Limpeza. Depois que o último zelador se aposentou, ele foi contratado pra cuidar do molho de chaves, entre outras tarefinhas. Mas trata-se apenas de um jovem descuidado, deve ter deixado ela cair.</t>
+	<n photo="OtterPhoto">Como assim “deixou cair”? Ou é muita responsabilidade ou ele tem culpa no cartório.</n>
+      </evidenceKey>
+
+      <evidenceFolder>
+	<p>Aqui nesse folder informativo diz que o artista principal dessa exposição chama-se...</p>
+	<t photo="AnteaterPhoto">Pinto. Ludwig Von Pinto. Um cara meio excêntrico, eu não entendo direito, faz umas loucuras, tem umas ideias bizarras.</t>
+	<t>Dizem que dessa vez ele tá um pouco mais comedido, mas nas outras exposições eu olhava praquilo e não entendia nada.</t>
+	<n photo="AnteaterPhoto">Um artista louco, justo hoje. Era só o que faltava mesmo.</n>
+      </evidenceFolder>
+
+      <bye>
+	<p>Muito obrigada pela sua cooperação, Senhor Segurança! Foi muito bom conversar com você! Te amo! </p>
+	<t>Obrigado a senhora! A disposição.</t>
+      </bye>
+    </dog>
+
+  </armadillo>
+
+ <!-- MENDIGO -->
+
+  <monkey>
+
+    <cat>
+      <intro>
+        <t>Bonito escritório, hein chefia. O Cleytonzinho aqui, num lugar desses, tava é bampti-bumpti pra vida.</t>
+	<p>E o senhor está confortável? Quer uma bebida antes ou podemos iniciar a conversa?</p> 
+	<n>Esse maltrapilho deve ter visto mais do que qualquer um o que estava acontecendo nesse museu...</n>
+      </intro>
+
+      <!-- Evidences -->
+      <evidenceHat>
+	<p>Interessado em um chapéu novo? O que acha desse modelito?</p>
+	<t>Tá de nhoc-nhoc pro meu lado, é? </t>
+	<t photo="WisentPhoto">Tinha um cara ontem usando um igual a esse. Se vestia de um jeito bizonho e falava com um sotaque engraçado, as vezes numa língua que Cleyton nunca nem tinha ouvido. </t>
+	<t photo="WisentPhoto">O maluco ficou na exposição quase até o fim.</t>
+	<n photo="WisentPhoto">Obviamente trata-se de algum estrangeiro. Um espião?</n>
+      </evidenceHat>
+
+      <evidenceMap>
+	<p>Você sabe ler? Reconhece isso aqui?</p>
+	<t photo="DeerPhoto">Ah é! Cleyton sempre via um sujeito agarrado com um desses, mais agarrado que o Cleyton com o seu cobre-cobre. </t>
+	<t photo="DeerPhoto">Não tem aqueles que vem sempre, sabe? Digo, meio mal da cabeça, mas praticamente mais “da casa” do que o Cleyton aqui. </t>
+	<n photo="DeerPhoto">Quem em sã consciência carregaria um mapa por um museu pelo qual caminha todos os dias? Tá difícil engolir essa...</n>
+      </evidenceMap>
+
+      <evidenceWatch>
+	<p>Esse relógio foi encontrado pelo segurança. Você sabe de alguma coisa?</p>
+	<t>Poxa vida né, autoridade. Essa belezinha deve valer uma grana. Cleyton ficou de olho no esquisitão que deixou cair o tic-tac lá no banheiro. </t>
+	<t>Uma pena, se não fosse pelo “segura”, Cleyton tinha uns brilha-brilha a mais no bolso.</t>
+	<n>Quem é o verdadeiro dono desse relógio? Quais eram suas intenções? Sinto que saber essas informações é fundamental para a solução desse caso.</n>
+      </evidenceWatch>
+
+      <evidenceKey>
+	<p>Dá só uma olhada nisso. Essa chave estava sumida desde ontem. Alguma ideia?</p>
+	<t photo="OtterPhoto">Olha, tem um novato cuidando da limpeza faz uns dias. </t>
+	<t photo="OtterPhoto">Cleyton tem certeza que viu ele de jampt-jampt em algumas salas, mas acha que é normal né.</t> 
+	<t photo="OtterPhoto">Ontem, Cleyton ouviu alguém caminhando e fazendo blem-blem-blem, não tem, quando já tava tudo escuro, mas não viu quem era.</t>
+	<n photo="OtterPhoto">Suspeito que esse zelador esteja envolvido, talvez a mando de alguém, uma força maior.</n>
+      </evidenceKey>
+
+      <evidenceFolder>
+	<p>Sei que isso não deve ser muito da sua conta, mas o que acha dessa exposição aqui do museu?</p>
+	<t photo="AnteaterPhoto">Ah, doutor, tem esse cara aí da foto. Cleyton viu esse tipo aí ontem.</t>
+	<t photo="AnteaterPhoto">Antes de dormir, Cleyton sempre se esfrega pra esquentar, não tem? Só que antes ele ouviu uns pof-pof lá de baixo, no corredor,  quando não tinha mais ninguém além do segura, que tava lá na entrada.</t>
+	<t photo="AnteaterPhoto">E então não é que bem esse da foto aí aparece saindo meio apressado? </t>
+	<n>Será que esse mendigo estava sóbrio ontem a noite? Uma parte de mim quer acreditar, mas ao mesmo momento sinto que ele não é uma fonte de confiança.</n>
+      </evidenceFolder>
+
+      <bye>
+	<p>Bom, isso é tudo. Obrigado pela ajuda.</p>
+	<t>É, doutor. A gente vê cada coisa nessa vida...</t>
+      </bye>
+    </cat>
+
+ <dog>
+      <intro>
+        <t>Que tipo de escritório é esse? Cadê a poltrona? </t>
+	<t>Tiram Cleyton do cantinho dele pra chegar num poc-poc desses e nem oferecem uma gut-gut…</t>
+	<p>Engraçadinho, né? Uma bomba prestes a mandar tudo pelos ares e você aí com esse papo.</p> 
+	<n>Por que esse cara é testemunha? Aposto que nem sabe que está em Vira-Vira.</n> 
+      </intro>
+
+      <!-- Evidences -->
+      <evidenceHat>
+	<p>Esse chapéu foi encontrado na galeria principal do museu ontem. Você viu alguém usando algo parecido?</p>
+	<t photo="WisentPhoto">Bom, tinha um cara falando uma língua que Cleyton não conhece e usando roupas pew-pew por aí ontem. </t>
+	<t photo="WisentPhoto">Cleyton nem deu muita bola mas acha que ele tinha um fruct-fruct parecido na cabeça sim…</t>
+	<n photo="WisentPhoto">Uma pessoa falando numa língua diferente e usando roupas peculiares. Poderia ser um estrangeiro?</n>
+      </evidenceHat>
+
+      <evidenceMap>
+	<p>Você viu alguém com um mapa parecido com esse ontem?</p>
+	<t>Sim, tinha várias, mas em particular… </t>
+	<t photo="DeerPhoto">Não sei se você vai acreditar no que Cleyton fala por que parece brincadeira, mas todo dia aparece um maluco andando pelo museu de um lado pro outro olhando num mapa e fazendo uns vapt-vapt com a caneta.</t> 
+	<t photo="DeerPhoto">Sério, ele praticamente vive lá dentro, que nem Cleyton!</t>
+	<n photo="DeerPhoto">Eu tô achando que só tem doido nesse museu!</n>
+      </evidenceMap>
+
+      <evidenceWatch>
+	<p>Hoje, esse relógio foi encontrado pelo segurança no banheiro masculino. O que você tem a dizer?</p>
+	<t>Tenho a dizer que esse relógio é uma belezura, mesmo quebrado deve valer um din-din. </t>
+	<t>Cleyton viu um cara qualquer  tentando “pescar” ele de uma fresta. Depois que o cara desistiu, foi Cleyton lá tentar também, né? Hehe... </t>
+	<n>Além de mendigo, ainda por cima é ladrão…</n>
+      </evidenceWatch>
+
+      <evidenceKey>
+	<p>Essa é uma das chaves do museu. Ela esteve desaparecida de ontem pra hoje.</p>
+	<t>É, Cleyton ouviu alguém tap-tap-tap pelo corredor ontem fazendo barulho de chave, não tem? </t>
+	<t photo="OtterPhoto">Mas sei lá, Cleyton acha que era do cara da limpeza, sabe, aquele novinho?</t>
+	<n>Não sei se ele sabe muito mais a respeito dessa chave.</n>
+      </evidenceKey>
+
+      <evidenceFolder>
+	<p>Olha, duvido que você esteja por dentro do assunto, mas dá uma olhada nisso aqui e me diga o que acha.</p>
+	<t photo="AnteaterPhoto">Esse cara da foto apareceu ontem por lá, Cleyton tem certeza. </t>
+	<t photo="AnteaterPhoto">Inclusive, Cleyton é doido, mas garante que esse maninho apareceu foi bem tarde. Não tem quando a pessoa é a última a tchau-tchau do museu? </t>
+	<n photo="AnteaterPhoto">Ok...</n>
+      </evidenceFolder>
+
+      <bye>
+	<p>Bom, é isso. Obrigada pela colaboração…</p>
+	<t>E aquele goró esperto, não tem?</t>
+      </bye>
+    </dog>
+
+  </monkey>
+  
+ <!-- CURADORA -->
+
+  <skunk>
+
+    <cat>
+    <intro>
+        <t>Senhor policial! Que bom que vocês chegaram. Por favor resolvam logo isso, estou a beira de um ataque! </t>
+	<p>Sem exaltações, Sra. Prosdócimo. </p> 
+	<n>Sempre tem um que não se controla… aposto que é fingimento.</n>
+      </intro>
+
+      <!-- Evidences -->
+      <evidenceHat>
+	<p>Temos aqui um chapéu encontrado na galeria. Você viu alguém usando algo parecido ontem?</p>
+	<t photo="WisentPhoto">Esse chapéu pertence a Igor Ivanofski. </t>
+	<t photo="WisentPhoto">Não vejo porque encará-lo como suspeito, inclusive aprecio muito a visita de estrangeiros ao museu. E esse rapaz em especial se mostrava tão interessado!</t>
+	<t photo="WisentPhoto">Quando conversamos, fiquei sabendo que ele é uma personalidade lá fora, um connoisseur da arte - até se mostrou inclinado a adquirir algumas peças.</t>
+	<t photo="WisentPhoto">Quanto mais gente assim, mais destaque o museu ganha!</t>
+	<n photo="WisentPhoto">Esse estrangeiro me parece inocente demais, falando desse jeito...</n>
+      </evidenceHat>
+
+      <evidenceMap>
+	<p>Esse mapa rabiscado foi encontrado ontem perto da loja de Souveniers.</p>
+	<t photo="DeerPhoto">Sr. Policial… é uma longa história, eu tenho até medo de falar. Esse mapa pertence a Rivaldo Meneghel, um crítico de arte que conheci a muito tempo.</t>
+	<t photo="DeerPhoto">Desde que fui contratada por esse museu, Rivaldo tem me perseguido, visitando a exposição diariamente.</t>
+	<t photo="DeerPhoto"> Ontem ele veio falar comigo: disse que meu sucesso logo iria acabar… eu acho que ele tem muita inveja de mim, vive fazendo anotações e praguejando enquanto caminha pelo corredor. Deveria ser internado!</t>
+	<n photo="DeerPhoto">Um homem cegado pelo espírito de vingança, aos poucos perdendo os traços da sua sanidade. Eis um forte candidato a cometer uma atrocidade. </n>
+      </evidenceMap>
+
+      <evidenceWatch>
+	<p>Esse relógio foi encontrado pelo segurança…</p>
+	<t photo="CapybaraPhoto">Veja o emblema decorando o relógio: ele é usado por membros do partido do candidato Marcelinho Abdalla, que vai tentar concorrer à prefeitura ano que vem. </t>
+	<t photo="CapybaraPhoto">Detetive, talvez seja necessário esclarecer: todos sabem que Marcelinho é um defensor da arte e da cultura.</t>
+	<t photo="CapybaraPhoto">Não vejo motivos para ligá-lo a esse crime, significa apenas que algum partidário seu andou por aqui…</t>
+	<n photo="CapybaraPhoto">Políticos metidos na trama. Isso está ficando cada vez mais interessante, obviamente algo não cheira bem por aqui.</n>
+      </evidenceWatch>
+
+      <evidenceKey>
+	<p>De ontem para hoje, esta chave estava desaparecida. Muito suspeito, você não acha?</p>
+	<t>Essa chave abre a porta do escaninho - onde estão as outras chaves.</t>
+	<t>Quem quer que a tenha, tem acesso à maioria das salas do museu. Estava mesmo desaparecida?</t>
+	<t>Que absurdo, é bem o que a gente ouve no rádio: nunca estamos seguros…</t>
+	<n>Eu não acredito em coincidências. Essa chave está certamente ligada ao crime. </n>
+      </evidenceKey>
+
+      <evidenceFolder>
+	<p>Esse é o informativo da exposição. Fale-me sobre o artista principal.</p>
+	<t photo="AnteaterPhoto">Ludwig Von Pinto é famoso por ser meio “excêntrico”. Você conhece as obras antigas dele? </t>
+	<t photo="AnteaterPhoto">Na minha opinião de curadora, são de um mal gosto dantesco. Mas enfim, por mais que ele não pareça bater bem, Ludwig esteve no museu apenas na inauguração da exposição, já faz semanas.</t>
+	<n photo="AnteaterPhoto">Justo na exposição do artista biruta aparece uma ameaça de bomba? Eu não nasci ontem...</n>
+      </evidenceFolder>
+
+      <bye>
+	<p>Enfim, cara Wanderleia. Vamos ver para onde anda essa investigação agora. Obrigado pela sua ajuda.</p>
+	<t>Pelo amor de deus, oficial! Faça as coisas voltarem ao normal logo, não é justo que eu seja alvo desse tipo de gente psicopata...</t>
+      </bye>
+    </cat>
+
+    <dog>
+      <intro>
+        <t>DETETIVE, VOCÊ NÃO SABE O QUANTO ESTOU SOFRENDO. Estou tão abalada, imagine você uma bomba! Na MINHA exposição! Acho que vou me me enfiar num buraco e ficar lá pra SEM-PRE!</t>
+	<p>Oh meu deus, curadora Wanderleia! Prometo que vou fazer o possível e o impossível para encontrar esse salafrário.</p> 
+	<n>Pobre alma, me parte o coração ver alguém nesse estado…</n>
+      </intro>
+
+      <!-- Evidences -->
+      <evidenceHat>
+	<p>Veja esse chapéu: ele lhe é familiar? Tem um cheiro tão diferente.</p>
+	<t photo="WisentPhoto">Certamente: o dono dele é Igor Ivanofski.</t>
+	<t photo="WisentPhoto">Detetive, entenda: se quiser, eu mesma escrevo uma lista de suspeitos pra vocês, não vejo ponto em ficar de olho em um inocente amante da arte só porque ele vem de outro país.</t>
+	<t photo="WisentPhoto">Sinceramente, atitude desrespeitosa, até. O rapaz veio aqui até querendo comprar obras, veja só!</t>
+	<n photo="WisentPhoto">Ok, só um estrangeiro perdido… o coitado perdeu o chapéu no pior dia possível.</n>
+      </evidenceHat>
+
+      <evidenceMap>
+	<p>Encontramos um mapa todo rabiscado jogado pelo chão. Algum palpite?</p>
+	<t photo="DeerPhoto">ESSE MAPA, ESSA LETRA!! Maldição. </t>
+	<t photo="DeerPhoto">Inspetora, esse mapa pertence a um sujeito chamado Rivaldo Meneghel. Agora eu tenho certeza do que está acontecendo aqui: este desgraçado veio colocar uma bomba na minha exposição. </t>
+	<t photo="DeerPhoto">Ele é um velho amigo que tem muita inveja do meu sucesso e não respeita mais meu trabalho, por favor, prenda ele!</t>
+	<n photo="DeerPhoto">Nossa, quanta raiva! Essa senhora tão amável, deve estar morrendo de medo. </n>
+      </evidenceMap>
+
+      <evidenceWatch>
+	<p>Esse relógio foi encontrado no banheiro masculino. O que acha dele?</p>
+	<t photo="CapybaraPhoto">Nossa, que confusão. Esse relógio pertence aos partidários de Marcelinho Abdalla, candidato a prefeito da nossa cidade pro ano que vem. </t>
+	<t photo="CapybaraPhoto"> É uma boa pessoa, e eu sei que ele já passou por uma tragédia envolvendo terroristas. Sinto por estarmos tendo que passar por isso.</t>
+	<n photo="CapybaraPhoto">Pobre homem, vítima de atentados uma vez e agora sendo envolvido nisso. Definitivamente não foi ele...</n>
+      </evidenceWatch>
+
+      <evidenceKey>
+	<p>Temos registrado o desaparecimento dessa chave de ontem para hoje. O que acha?</p>
+	<t>Que absurdo! Essa chave dá acesso ao escaninho com todas as outras chaves. Quem quer que a tenha pego, deve estar envolvido.</t>
+	<t photo="OtterPhoto">Que horror, o zelador responsável pelo extravio deveria ser demitido...</t>
+	<n photo="OtterPhoto">Realmente, deixar algo assim nas mãos de gente irresponsável sempre dá problema.</n>
+      </evidenceKey>
+
+      <evidenceFolder>
+	<p>Conte-me sobre a exposição que está acontecendo. Quem é o artista?</p>
+	<t photo="AnteaterPhoto">Um cara muito maluco chamado Ludwig Von Pinto é a estrela da exposição. </t>
+	<t photo="AnteaterPhoto">As obras dele já foram mais extravagantes em outra época, mas agora estão mais sóbrias. Particularmente, não é do meu gosto mas reconheço o impacto. </t>
+	<t photo="AnteaterPhoto">E perto do que ele já andou expondo por aqui essas até que se salvam.</t>
+	<n photo="AnteaterPhoto">Que artista misterioso. O que esse povo via de tão chocante nas obras dele?</n>
+      </evidenceFolder>
+
+      <bye>
+	<p>Obrigada pela ajuda, Wanderleia. Vamos pegar logo esse criminoso.</p>
+	<t>Inspetora, se precisar de mais qualquer coisa, pode me chamar! Eu não pensaria duas vezes e prenderia logo esse Rivaldo.</t>
+      </bye>  
+    </dog>
+
+  </skunk>
+
+  
+ <!-- DIRETOR -->
+
+  <boar>
+
+    <cat>
+      <intro>
+        <t>Muito bem, o que temos aqui? Uma bomba prestes a explodir no meu museu e sou eu que preciso ficar conversando com os “oficiais da lei”?</t>
+	<p>Entendo sua preocupação, Sr. Diretor. Mas talvez você tenha informações valiosas para a investigação.</p> 
+	<t> Que seja, vamos logo com isso.</t>
+	<n>Bancando o figurão por fora, mas nervosismo é sinal de cumplicidade…</n> 
+      </intro>
+
+      <!-- Evidences -->
+      <evidenceHat>
+	<p>Esse chapéu foi encontrado no seu museu. Alguma ideia sobre quem seria o dono?</p>
+	<t photo="WisentPhoto">Rá! Eu sabia que esse safado estava envolvido. Igor Ivanofski é o dono desse chapéu. </t>
+	<t photo="WisentPhoto">Estrangeiro, pro meu desespero. Tentou negociar comigo uma estátua. Como não quis vendê-la, deve ter ficado irritado. </t>
+	<t photo="WisentPhoto">A gente nunca sabe se tá negociando com lunáticos.</t>
+	<n photo="WisentPhoto">Explodir um museu por não ter conseguido comprar uma estátua? Fale de amor pela arte. Essa é nova.</n>
+      </evidenceHat>
+
+      <evidenceMap>
+	<p>Esse mapa usado do museu foi encontrado próximo a loja de souveniers…</p>
+	<t>Eu sei de quem é esse mapa, mas sinceramente? Vocês estão fazendo uma péssima investigação. </t>
+	<t photo="DeerPhoto">Rivaldo Meneghel é apenas um rapaz sem talento que tentou trabalhar aqui mas foi recusado. </t>
+	<t photo="DeerPhoto">Eu sei que ele volta e meia aparece pra ficar vagando pelo museu, mas é apenas um dos tantos estudiosos das arte que andam por aqui.</t>
+	<n photo="DeerPhoto">Se nem esse velho rabugento se incomodou com o Sr. Meneghel… grande coisa ele não deve ser mesmo.</n>
+      </evidenceMap>
+
+      <evidenceWatch>
+	<p>Veja esse relógio. Foi encontrado pelo segurança. Reconhece-o de algum lugar?</p>
+	<t photo="CapybaraPhoto">Ah, eu sabia! Podem parar as investigações, detetive: gravado nesse relógio está o símbolo de Marcelinho Abdalla, o maior salafrário desse país. </t>
+	<t photo="CapybaraPhoto">Vai tentar se eleger ano que vem e explodirá o meu museu para forjar uma denúncia de falta de segurança pública. Está mais do que óbvio!</t>
+	<n photo="CapybaraPhoto">Quanta exaltação. Temos aqui uma conspiração que chega até os altos rankings da política de Vira-Vira. Perigoso...</n>
+      </evidenceWatch>
+
+      <evidenceKey>
+	<p>Essa chave misteriosamente desapareceu ontem para reaparecer hoje. O que acha disso?</p>
+	<t>Vocês deveriam investigar suspeitos de verdade. </t>
+	<t photo="OtterPhoto">O rapaz da limpeza é meio atrapalhado e vive perdendo as chaves, as vassouras, já deve ser a terceira vez que acontece. </t>
+	<t photo="OtterPhoto">Sergio da Limpeza é só um novato, não um terrorista. Se você visse ele ia entender. </t>
+	<n photo="OtterPhoto">Esse rapaz não sabe a confusão em que se meteu...</n>
+      </evidenceKey>
+
+      <evidenceFolder>
+	<p>Fale-me sobre a exposição atual. Sobre o artista principal e etc…</p>
+	<t photo="AnteaterPhoto">Ah, o que você quer saber sobre o Ludwig Von Pinto? </t>
+	<t photo="AnteaterPhoto">Semana passada ele ligou enchendo o saco porque tivemos que mover algumas de suas obras para o depósito, mas veja. </t>
+	<t photo="AnteaterPhoto">Além de maluco, ele parece ser meio obcecado. Nessa última exposição tivemos mais de 50 esculturas suas expostas. </t>
+	<t photo="AnteaterPhoto">Não podemos receber outros artistas sem reservar espaço.</t>
+	<n photo="AnteaterPhoto">E aposto que se soubesse dessa confusão, não teria trazido nenhuma delas para esse museu.</n>
+      </evidenceFolder>
+
+      <bye>
+	<p>Bem, doutor Maximillian. Creio que por enquanto é só.</p>
+	<t>E eu creio que tem uma bomba-relógio ainda esperando para ser desarmada no meu museu, não é?</t>
+      </bye>
+    </cat>
+
+    <dog>
+      <intro>
+        <t>Só vou dizer uma coisa, detetive: minha paciência está curta. Vamos logo com isso que eu estou quase preferindo investigar por conta do que confiar em vocês. </t>
+	<p>Nossa…</p> 
+	<n>Esse vai ser difícil.</n> 
+      </intro>
+
+      <!-- Evidences -->
+      <evidenceHat>
+	<p>OK, você reconhece esse chapéu de algum lugar?</p>
+	<t>O dono desse chapéu devia ser preso apenas pelo que tentou fazer no meu museu. </t>
+	<t photo="WisentPhoto">Igor Ivanovski ofereceu dinheiro por uma estátua, veja só! Querendo privar o público de sua apreciação.</t>
+	<t photo="WisentPhoto">Estrangeiro é tudo a mesma coisa, invadem nosso país e tentam roubar nossa cultura.</t>
+	<n photo="WisentPhoto">Estou começando a ficar com medo desses estrangeiros também.</n>
+      </evidenceHat>
+
+      <evidenceMap>
+	<p>Saberia me explicar o que significa esse mapa rasurado que encontramos no chão da loja de Souvenir mais cedo?</p>
+	<t photo="DeerPhoto">Pelo amor de deus, é só o coitado do Rivaldo Meneghel. </t>
+	<t photo="DeerPhoto">Qual é o problema de vocês? Ele está quase sempre no museu, é só um frustrado inofensivo.</t>
+	<n photo="DeerPhoto">Tá bom, tá bom, já entendi. Não precisa falar desse jeito. </n>
+      </evidenceMap>
+
+      <evidenceWatch>
+	<p>Veja este relógio: foi encontrado no banheiro masculino.</p>
+	<t>AH MAS EU SABIA. POR DEUS, EU SABIA. </t>
+	<t photo="CapybaraPhoto">Marcelinho Abdalla e seus capangas estiveram no meu museu. O maior salafrário desse planeta. </t>
+	<t photo="CapybaraPhoto">Se esse relógio estava lá mesmo, então nem precisa mais investigar nada! </t>
+	<t photo="CapybaraPhoto">Inspetora, marque minhas palavras: essa bomba é um estratagema político. Marcelinho quer ganhar votos a custas do medo do povo.</t>
+	<n photo="CapybaraPhoto">Puxa, não havia pensado por esse viés. Políticos também podem ser perigosos.</n>
+      </evidenceWatch>
+
+      <evidenceKey>
+	<p>Esta chave estava perdida desde ontem. O que acha?</p>
+	<t photo="OtterPhoto">Culpa do irresponsável do Sérgio da Limpeza. Francamente! Vive perdendo tudo, é só um novato sem-noção.</t>
+	<n photo="OtterPhoto">Uma chave assim sumir por descuido justo nessa noite? Que azar.</n>
+      </evidenceKey>
+
+      <evidenceFolder>
+	<p>Dê uma olhada no folder da exposição. Quem é esse artista?</p>
+	<t photo="AnteaterPhoto">Ludwig Von Pinto, sujeito engraçado, famoso escultor de bizarrices. </t>
+	<t photo="AnteaterPhoto"> Faz tempo que ele não aparece por aqui, ligou semana passada enchendo o saco porque tive que mover algumas das suas obras para o depósito. </t>
+	<t photo="AnteaterPhoto">Ele também é suspeito?</t>
+	<n photo="AnteaterPhoto">Suspeito de colocar uma bomba na própria exposição? Seria engraçado.</n>
+      </evidenceFolder>
+
+      <bye>
+	<p>Bem, por enquanto é isso...</p>
+	<t>Eu espero que essa demora resulte em algo bom, daqui a pouco essa bomba explode e vai ser culpa de vocês!</t>
+      </bye>
+    </dog>
+
+  </boar>
+
+
+</testimonials>

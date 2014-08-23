@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Sprites>
+<!--Units-->
+  <Sprite name="player" atlas="units" texture="player">
+    <Size width="32" height="32"/>
+    <Origin x="9" y="32"/>
+    <Animations>
+      <Anim name="idle" delay="5" frames="0-13"/>
+      <Anim name="jump" delay="3" frames="16-18"/>
+      <Anim name="jumpv" delay="3" frames="19-20"/>
+      <Anim name="fall" delay="3" frames="24-26"/>
+      <Anim name="fallv" delay="3" frames="27-29"/>
+      <Anim name="run" delay="3" frames="32-39"/>
+    </Animations>
+  </Sprite>
+</Sprites>
