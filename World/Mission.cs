@@ -38,11 +38,16 @@ namespace Bones
 
         public override void Update()
         {
+            if (Player == null) Player = GetEntity<Player>();
+
             if (Controls.Swap.Pressed)
             {
                 World++;
                 if (World > 1) World = 0;
                 Add(new Flash(Color.Cyan) { LifeSpan = 50, FinalAlpha = 0, Layer = Hud.LAYER + 1 });
+
+                Player.Swap(World);
+
                 var map = OgProj.Entities["tiles"].GetGraphic<Tilemap>();
                 if(World==0)
                 {

@@ -67,12 +67,24 @@ namespace Bones
 
         private IEnumerator Attacking()
         {
-            Movement.Freeze = true;
+            Movement.Speed.X = 0;
+            Movement.Speed.Y = 0;
+            Movement.TargetSpeed.X = 0;
+            Movement.TargetSpeed.Y = 0;
             Sprite.Play("attack");
-            yield return 2;
-            Scene.Add(new Slash(X, Y-16, Angle, 0.8f, -0.8f*Side));
-            yield return 8;
-            Movement.Freeze = false;
+
+            if (Mission.Instance.World == 0)
+            {
+                yield return 2;
+                Scene.Add(new Slash(X, Y - 16, Angle, 0.8f, -0.8f * Side));
+                yield return 12;
+            }
+            else
+            {
+                yield return 8;
+                Scene.Add(new Beam(X + Side*10, Y - 18, Angle, this));
+                yield return 20;
+            }
             yield return SetState(Normal);
         }
 
@@ -158,6 +170,19 @@ namespace Bones
                 yield return 0;
             }
             yield return SetState(Normal);
+        }
+
+        internal void Swap(int World)
+        {
+            RemoveGraphic(Sprite);
+            if (Mission.Instance.World==0)
+            {
+                Sprite = AddGraphic(SpriteData.GetAnimation("soldier"));
+            }
+            else
+            {
+                Sprite = AddGraphic(SpriteData.GetAnimation("fugitive"));
+            }
         }
     }
 }
