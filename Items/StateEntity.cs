@@ -21,9 +21,16 @@ namespace Bones
         public List<Coroutine> coroutinesToAdd;
         public Coroutine StateCoroutine;
 
-        public StateEntity(Vector2 position)
+        public StateEntity(Vector2 position, int group)
             : base((int)position.X, (int)position.Y)
-        {}
+        {
+            Group = group;
+        }
+
+        public override void Added()
+        {
+            Swap();
+        }
 
         public int SetState(StateMethod stateMethod, bool reset = false)
         {
@@ -45,7 +52,6 @@ namespace Bones
         public virtual void SetState(string stateName)
         {
             StateMethod stateMethod = (StateMethod)Delegate.CreateDelegate(typeof(StateMethod), this, stateName, false);
-            stateName = stateName;
 
             if ((stateMethod != state))
             {
@@ -93,6 +99,7 @@ namespace Bones
             coroutines = null;
         }
 
+
         IEnumerator DoSetState()
         {
             yield return 0;
@@ -119,6 +126,18 @@ namespace Bones
                 AddComponent(co);
 
             coroutinesToAdd = null;
+        }
+
+        internal void Swap()
+        {
+            if (Mission.Instance.World == Group || Group==0)
+            {
+                Graphic.Alpha = 1f;
+            }
+            else
+            {
+                Graphic.Alpha = 0.1f;
+            }
         }
     }
 }

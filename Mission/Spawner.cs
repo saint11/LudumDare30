@@ -13,7 +13,7 @@ namespace Bones
     {
         private Spritemap<string> Sprite;
         public Spawner(int x, int y)
-            :base(new Vector2(x,y))
+            :base(new Vector2(x,y),0)
         {
             Sprite = AddGraphic(SpriteData.GetAnimation("spawner"));
             Sprite.Play("idle");

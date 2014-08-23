@@ -20,7 +20,7 @@ namespace Bones
         private int AttackDamage=1;
 
         public Enemy(int x, int y)
-            :base(Vector2.Zero)
+            :base(Vector2.Zero, Mission.Instance.World)
         {
             SetPosition(x, y);
 
@@ -42,7 +42,7 @@ namespace Bones
         {
             while(true)
             {
-                if (Player!=null)
+                if (Player!=null && Player.Group==Mission.Instance.World)
                 {
                     Vector2 target = new Vector2(X - Player.X, Y - Player.Y);
                     target.Normalize(50);
@@ -59,7 +59,7 @@ namespace Bones
                 }
                 else
                 {
-                    Player = Scene.GetEntity<Player>();
+                    Player = Mission.Instance.GetCurrentPlayer();
                 }
 
                 if (Movement.Speed.Length>0.1f)
@@ -88,6 +88,7 @@ namespace Bones
         public static Enemy CreateFromXML(Scene scene, XmlAttributeCollection xml)
         {
             Enemy n = new Enemy(int.Parse(xml["x"].Value), int.Parse(xml["y"].Value));
+            
             scene.Add(n);
 
             return n;

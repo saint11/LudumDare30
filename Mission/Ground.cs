@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Bones
 {
-    class Ground: StateEntity
+    class Ground: Entity
     {
         Image Bg;
 
         public Ground()
-            : base(Vector2.Zero)
+            : base()
         {
             Bg = AddGraphic(new Image(Bones.GAME_PATH + "Images/bg/ground.png"));
             Bg.Repeat = Repeat.XY;

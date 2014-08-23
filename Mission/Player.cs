@@ -23,10 +23,11 @@ namespace Bones
         public int Hp=6;
         public int Invulnerable = 0;
 
-        public Player(int x, int y)
-            : base(new Otter.Vector2(x, y))
+        public Player(int x, int y, int world)
+            : base(new Otter.Vector2(x, y), world)
         {
-            Sprite = AddGraphic(SpriteData.GetAnimation("soldier"));
+            if (world==1) Sprite = AddGraphic(SpriteData.GetAnimation("soldier"));
+            else if (world==2) Sprite = AddGraphic(SpriteData.GetAnimation("fugitive"));
 
             AddCollider(new BoxCollider(16, 12, (int)Tags.Actor, (int)Tags.Player));
             Collider.OriginX = 8;
@@ -73,13 +74,13 @@ namespace Bones
             Movement.TargetSpeed.Y = 0;
             Sprite.Play("attack");
 
-            if (Mission.Instance.World == 0)
+            if (Mission.Instance.World == 1)
             {
                 yield return 2;
                 Scene.Add(new Slash(X, Y - 16, Angle, 0.8f, -0.8f * Side));
                 yield return 12;
             }
-            else
+            else if (Mission.Instance.World == 2)
             {
                 yield return 8;
                 Scene.Add(new Beam(X + Side*10, Y - 18, Angle, this));
@@ -129,14 +130,13 @@ namespace Bones
         }
 
 
-        public static Player CreateFromXML(Scene scene, XmlAttributeCollection xml)
+        public static void CreateFromXML(Scene scene, XmlAttributeCollection xml)
         {
-            Player n = new Player(int.Parse(xml["x"].Value), int.Parse(xml["y"].Value));
+            Player n0 = new Player(int.Parse(xml["x"].Value), int.Parse(xml["y"].Value), 1);
+            Player n1 = new Player(int.Parse(xml["x"].Value), int.Parse(xml["y"].Value), 2);
 
-            scene.Add(n);
-
-            (scene as Mission).Camera.SetTarget(n);
-            return n;
+            scene.Add(n0);
+            scene.Add(n1);
         }
 
         internal void Damage(int damage, Enemy enemy)
@@ -171,19 +171,6 @@ namespace Bones
                 yield return 0;
             }
             yield return SetState(Normal);
-        }
-
-        internal void Swap(int World)
-        {
-            RemoveGraphic(Sprite);
-            if (Mission.Instance.World==0)
-            {
-                Sprite = AddGraphic(SpriteData.GetAnimation("soldier"));
-            }
-            else
-            {
-                Sprite = AddGraphic(SpriteData.GetAnimation("fugitive"));
-            }
         }
     }
 }

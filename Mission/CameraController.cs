@@ -7,20 +7,15 @@ using System.Threading.Tasks;
 
 namespace Bones
 {
-    public class CameraController :StateEntity
+    public class CameraController :Entity
     {
         private Entity Target;
         private Vector2 ShakeAmmount;
         private float ShakeDuration;
 
-        public void InitScripts(LuaScript script)
-        {
-            if (script == null) return;
-            script.AddCommand<string>("CameraFollow", this, Follow);
-        }
-
+        
         public CameraController()
-            : base(Vector2.Zero)
+            : base()
         {
             
         }
@@ -30,19 +25,17 @@ namespace Bones
             this.Target = target;
         }
 
-        public void Follow(string target)
-        {
-            if (target.ToLower() == "player")
-                this.Target = Player.Instance;
-        }
-
         public override void Update()
         {
             Vector2 final = new Vector2();
-            if (Target != null)
+            if (Target != null && Target.Group==Mission.Instance.World)
             {
                 final.X = Target.X - Game.Width / 2;
                 final.Y = Target.Y - Game.Height / 2;
+            }
+            else
+            {
+                SetTarget(Mission.Instance.GetCurrentPlayer());
             }
 
             Scene.CameraX = Calc.LerpSnap(Scene.CameraX, final.X, 0.5f) + (Rand.Float(ShakeAmmount.X) * ShakeDuration);

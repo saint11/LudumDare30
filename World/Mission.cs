@@ -14,13 +14,14 @@ namespace Bones
         public CameraController Camera;
         private OgmoProject OgProj;
 
-        public int World = 0;
+        public int World = 1;
 
         public Mission()
             : base()
         {
             Instance = this;
-
+            
+            PauseGroup(World+1);
             Camera = Add(new CameraController());
 
             Add(new Ground() { Layer = 1100 });
@@ -38,29 +39,46 @@ namespace Bones
 
         public override void Update()
         {
-            if (Player == null) Player = GetEntity<Player>();
-
             if (Controls.Swap.Pressed)
             {
-                World++;
-                if (World > 1) World = 0;
-                Add(new Flash(Color.Cyan) { LifeSpan = 50, FinalAlpha = 0, Layer = Hud.LAYER + 1 });
-
-                Player.Swap(World);
-
-                var map = OgProj.Entities["tiles"].GetGraphic<Tilemap>();
-                if(World==0)
-                {
-                    //map.SetTexture(Bones.Atlas["tiles"].GetAtlasTexture("caves"));
-                    map.SetTexture(Bones.GAME_PATH+"Gfx/tiles/caves.png");
-                }
-                else
-                {
-                    map.SetTexture(Bones.GAME_PATH + "Gfx/tiles/cavesFuture.png");
-
-                }
-                
+                SwapWorlds();
             }
+        }
+
+        private void SwapWorlds()
+        {
+            PauseGroupToggle(World);
+            World++;
+            if (World > 2) World = 1;
+            Add(new Flash(Color.Cyan) { LifeSpan = 50, FinalAlpha = 0, Layer = Hud.LAYER + 1 });
+            PauseGroupToggle(World);
+
+            foreach (var e in GetEntities<StateEntity>()) e.Swap();
+
+            var map = OgProj.Entities["tiles"].GetGraphic<Tilemap>();
+            if (World == 1)
+            {
+                //map.SetTexture(Bones.Atlas["tiles"].GetAtlasTexture("caves"));
+                map.SetTexture(Bones.GAME_PATH + "Gfx/tiles/caves.png");
+            }
+            else if (World==2)
+            {
+                map.SetTexture(Bones.GAME_PATH + "Gfx/tiles/cavesFuture.png");
+
+            }
+
+        }
+
+        public Player GetCurrentPlayer()
+        {
+            Player player=null;
+            var players = GetEntities<Player>();
+            foreach (var p in players)
+            {
+                if (p.Group == World) player = p;
+            }
+
+            return player;
         }
     }
 }
