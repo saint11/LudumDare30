@@ -42,8 +42,8 @@ namespace Bones
         {
             while (true)
             {
-                Movement.TargetSpeed.X = Controls.Axis.X * 200;
-                Movement.TargetSpeed.Y = Controls.Axis.Y * 200;
+                Movement.TargetSpeed.X = Controls.Axis.X * 140;
+                Movement.TargetSpeed.Y = Controls.Axis.Y * 140;
 
                 if (Math.Abs(Controls.Axis.X) > 0 || Math.Abs(Controls.Axis.Y) > 0)
                 {
@@ -128,7 +128,7 @@ namespace Bones
 
         internal void Damage(int damage, Enemy enemy)
         {
-            if (Invulnerable != 0) return;
+            if (Invulnerable != 0 || damage==0) return;
 
             Invulnerable = 40;
 
@@ -146,8 +146,9 @@ namespace Bones
 
         private IEnumerator TakingDamage()
         {
-
             Sprite.Scale = 1.3f;
+            (Scene as Mission).Camera.Shake(8, 30);
+            Scene.Add(new Flash(Color.White) { Alpha = 0.5f, FinalAlpha = 0f, LifeSpan = 15, Layer = Hud.LAYER + 1 });
             Tween(Sprite, new { ScaleX = 1, ScaleY = 1 }, 30).Ease(Ease.BounceOut);
             int i = 10;
             while(i-->0)

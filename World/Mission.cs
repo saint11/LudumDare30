@@ -12,6 +12,9 @@ namespace Bones
         public new static Mission Instance;
         public Player Player;
         public CameraController Camera;
+        private OgmoProject OgProj;
+
+        public int World = 0;
 
         public Mission()
             : base()
@@ -24,13 +27,35 @@ namespace Bones
             Add(new Sky() { Layer = -1000 });
             //Add(new Terrain("test"));
 
-            OgmoProject og = new OgmoProject(Bones.GAME_PATH + "Maps/Bones.oep", Bones.GAME_PATH + "Images/");
-            og.RegisterTag((int)Tags.Solid, "solid");
-            og.BaseTileDepth = 1000;
+            OgProj = new OgmoProject(Bones.GAME_PATH + "Maps/Bones.oep", Bones.GAME_PATH + "Images/");
+            OgProj.RegisterTag((int)Tags.Solid, "solid");
+            OgProj.BaseTileDepth = 1000;
 
-            og.LoadLevel(Bones.GAME_PATH + "Maps/test.oel", this);
-
+            OgProj.LoadLevel(Bones.GAME_PATH + "Maps/test.oel", this);
+            
             Add(new Hud());
+        }
+
+        public override void Update()
+        {
+            if (Controls.Swap.Pressed)
+            {
+                World++;
+                if (World > 1) World = 0;
+                Add(new Flash(Color.Cyan) { LifeSpan = 50, FinalAlpha = 0, Layer = Hud.LAYER + 1 });
+                var map = OgProj.Entities["tiles"].GetGraphic<Tilemap>();
+                if(World==0)
+                {
+                    //map.SetTexture(Bones.Atlas["tiles"].GetAtlasTexture("caves"));
+                    map.SetTexture(Bones.GAME_PATH+"Gfx/tiles/caves.png");
+                }
+                else
+                {
+                    map.SetTexture(Bones.GAME_PATH + "Gfx/tiles/cavesFuture.png");
+
+                }
+                
+            }
         }
     }
 }

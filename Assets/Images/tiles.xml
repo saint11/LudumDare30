@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
-<!-- $TexturePacker:SmartUpdate:f5ea704a33a465ecfe71a9aab96d42b0:149f32bf35dd4b2a79ea45dcf8e6c7b5:8c35c81d6c02a4e8a52d04a540c911af$ -->
+<!-- $TexturePacker:SmartUpdate:62c3e085fa18e58cc302c63ed0d53243:e71fcbde6ac7a46a3340036f5609afdb:8c35c81d6c02a4e8a52d04a540c911af$ -->
 <TextureAtlas imagePath="tiles.png">
-    <SubTexture name="Caves" x="2" y="2" width="256" height="32"/>
-    <SubTexture name="drawBigTile" x="104" y="36" width="32" height="26"/>
-    <SubTexture name="drawTile" x="70" y="36" width="32" height="26"/>
-    <SubTexture name="metal0" x="36" y="36" width="32" height="26"/>
-    <SubTexture name="metal1" x="138" y="36" width="46" height="24"/>
-    <SubTexture name="metalWall0" x="2" y="36" width="32" height="26"/>
-    <SubTexture name="solid" x="186" y="36" width="64" height="16"/>
+    <SubTexture name="caves" x="2" y="36" width="256" height="32"/>
+    <SubTexture name="cavesFuture" x="2" y="2" width="256" height="32"/>
 </TextureAtlas>

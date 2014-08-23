@@ -11,10 +11,11 @@ namespace Bones
     {
         List<Spritemap<string>> HpDisplay;
         Player Player;
+        public static int LAYER = -100000000;
 
         public Hud()
         {
-            Layer = -100000000;
+            Layer = LAYER;
         }
 
         public override void Update()

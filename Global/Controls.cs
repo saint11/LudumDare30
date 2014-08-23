@@ -16,7 +16,7 @@ namespace Bones
         public static Button SpecialAttack = new Button();
         public static Button Back = new Button();
         public static Button Action = new Button();
-        public static Button Inventory = new Button();
+        public static Button Swap = new Button();
         public static Button ChangeStance = new Button();
         public static Button Defend = new Button();
 
@@ -46,8 +46,8 @@ namespace Bones
             Action.AddKey(Key.Space);
             Action.AddButton(0, 1);
 
-            Inventory.AddKey(new Key[] { Key.Tab, Key.I });
-            Inventory.AddButton(7, 1);
+            Swap.AddKey(new Key[] { Key.Tab, Key.I, Key.Space });
+            Swap.AddButton(7, 1);
 
             ChangeStance.AddKey(Key.Up);
             ChangeStance.AddButton(3, 1);
@@ -67,7 +67,7 @@ namespace Bones
             SpecialAttack.UpdateFirst();
             Back.UpdateFirst();
             Action.UpdateFirst();
-            Inventory.UpdateFirst();
+            Swap.UpdateFirst();
             ChangeStance.UpdateFirst();
             Defend.UpdateFirst();
 

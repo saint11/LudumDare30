@@ -9,7 +9,9 @@ namespace Bones
 {
     public class CameraController :StateEntity
     {
-        private Entity target;
+        private Entity Target;
+        private Vector2 ShakeAmmount;
+        private float ShakeDuration;
 
         public void InitScripts(LuaScript script)
         {
@@ -25,33 +27,43 @@ namespace Bones
 
         public void SetTarget(Entity target)
         {
-            this.target = target;
+            this.Target = target;
         }
 
         public void Follow(string target)
         {
             if (target.ToLower() == "player")
-                this.target = Player.Instance;
+                this.Target = Player.Instance;
         }
 
         public override void Update()
         {
-            if (target != null)
+            Vector2 final = new Vector2();
+            if (Target != null)
             {
-                Scene.CameraX = target.X - Game.Width / 2;
-                if (Scene.CameraX < 0) Scene.CameraX = 0;
-                if (Scene.CameraX + Game.Width > Scene.Width) Scene.CameraX = Scene.Width - Game.Width;
-                
-                Scene.CameraY = target.Y - Game.Height / 2;
-                if (Scene.CameraY < 0) Scene.CameraY = 0;
-                if (Scene.CameraY + Game.Height > Scene.Height) Scene.CameraY = Scene.Height - Game.Height;
-                
+                final.X = Target.X - Game.Width / 2;
+                final.Y = Target.Y - Game.Height / 2;
             }
+
+            Scene.CameraX = Calc.LerpSnap(Scene.CameraX, final.X, 0.5f) + (Rand.Float(ShakeAmmount.X) * ShakeDuration);
+            Scene.CameraY = Calc.LerpSnap(Scene.CameraY, final.Y, 0.5f) + (Rand.Float(ShakeAmmount.Y) * ShakeDuration);
+            if (ShakeDuration > 0) ShakeDuration--;
+
+            if (Scene.CameraX < 0) Scene.CameraX = 0;
+            if (Scene.CameraX + Game.Width > Scene.Width) Scene.CameraX = Scene.Width - Game.Width;
+            if (Scene.CameraY < 0) Scene.CameraY = 0;
+            if (Scene.CameraY + Game.Height > Scene.Height) Scene.CameraY = Scene.Height - Game.Height;   
         }
 
         internal bool OnCamera(Entity other)
         {
             return (new Rectangle(0, 0, (int)Game.Width, (int)Game.Height)).Contains((int)(other.X - Scene.CameraX), (int)(other.Y - Scene.CameraY));
+        }
+
+        public void Shake(float ammount, int duration)
+        {
+            ShakeAmmount = new Vector2(ammount*2 / duration);
+            ShakeDuration = duration;
         }
     }
 }

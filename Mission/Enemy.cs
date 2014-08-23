@@ -1,5 +1,6 @@
 ﻿using Otter;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,7 @@ namespace Bones
         private Entity Player;
         private BasicMovement Movement;
         private bool Outline=true;
+        private int AttackDamage=1;
 
         public Enemy(int x, int y)
             :base(Vector2.Zero)
@@ -36,7 +38,7 @@ namespace Bones
         }
 
 
-        private System.Collections.IEnumerator Follow()
+        private IEnumerator Follow()
         {
             while(true)
             {
@@ -52,7 +54,7 @@ namespace Bones
                     if (col != null)
                     {
                         Player p = col.Entity as Player;
-                        p.Damage(1, this);
+                        p.Damage(AttackDamage, this);
                     }
                 }
                 else
@@ -106,7 +108,7 @@ namespace Bones
             else SetState(TakeHit);
         }
 
-        private System.Collections.IEnumerator TakeHit()
+        private IEnumerator TakeHit()
         {
             Sprite.Play("run");
             yield return 30;
@@ -130,15 +132,17 @@ namespace Bones
                 Sprite.Alpha = prev;
             }
         }
-        private System.Collections.IEnumerator Die()
+        private IEnumerator Die()
         {
+            AttackDamage = 0;
             Outline = false;
             Movement.TargetSpeed.X = 0;
             Movement.TargetSpeed.Y = 0;
             ExtraLayer = 100;
-            RemoveColliders(Collider);
             Sprite.Play("die");
             yield return 50;
+            RemoveColliders(Collider);
+            Movement.Freeze = true;
             Tween(Sprite, new { Alpha = 0 }, 200).OnComplete(() => { RemoveSelf(); });
             yield return 0;
         }
