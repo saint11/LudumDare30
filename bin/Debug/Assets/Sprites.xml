@@ -10,13 +10,23 @@
       <Anim name="attack" delay="5" frames="0,16-19"/>
     </Animations>
   </Sprite>
+
   <Sprite name="crab" atlas="units" texture="crab">
     <Size width="32" height="32"/>
     <Origin x="16" y="32"/>
     <Animations>
-      <Anim name="idle" delay="20" frames="0-4"/>
-      <Anim name="run" delay="7" frames="0-4"/>
+      <Anim name="idle" delay="10" loop="true" frames="0-4"/>
+      <Anim name="run" delay="4" loop="true" frames="0-4"/>
       <Anim name="die" delay="5" loop="false" frames="8-13"/>
+    </Animations>
+  </Sprite>
+
+<!--Environment-->
+  <Sprite name="spawner" atlas="units" texture="spawner">
+    <Size width="32" height="32"/>
+    <Origin x="16" y="16"/>
+    <Animations>
+      <Anim name="idle" delay="4" loop="true" frames="0-6"/>
     </Animations>
   </Sprite>
 
@@ -28,4 +38,16 @@
       <Anim name="attack" delay="3" loop="false" frames="0-3"/>
     </Animations>
   </Sprite>
+
+  <!--Interface-->
+  <Sprite name="heart" atlas="interface" texture="heart">
+    <Size width="15" height="13"/>
+    <Origin x="8" y="24"/>
+    <Animations>
+      <Anim name="full" delay="3" frames="0"/>
+      <Anim name="half" delay="3" frames="1"/>
+      <Anim name="empty" delay="5" loop="false" frames="0,1,2"/>
+    </Animations>
+  </Sprite>
+
 </Sprites>

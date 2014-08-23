@@ -12,10 +12,12 @@ namespace Bones
         private Spritemap<string> Sprite;
         private List<Entity> HaveHit;
         private Vector2 Speed;
+        private float Angle;
 
         public Slash(float x, float y, float angle,float sizeX,float sizeY)
             :base(x,y)
         {
+            Angle = angle;
             Sprite = AddGraphic(SpriteData.GetAnimation("slash"));
             Sprite.Angle = angle;
             Sprite.Play("attack");
@@ -25,8 +27,8 @@ namespace Bones
 
             Speed = new Vector2((float)Math.Cos(angle * Util.DEG_TO_RAD), -(float)Math.Sin(angle * Util.DEG_TO_RAD));
             AddCollider(new BoxCollider(
-                (int)(Math.Abs(Sprite.ScaledWidth*1.5f)),
-                (int)(Math.Abs(Sprite.ScaledHeight*1.5f)), (int)Tags.FX));
+                (int)(Math.Abs(Sprite.ScaledWidth*1f)),
+                (int)(Math.Abs(Sprite.ScaledHeight*1f)), (int)Tags.FX));
             Collider.CenterOrigin();
             Collider.X += Speed.X * 8;
             Collider.Y += Speed.Y * 8;
@@ -50,7 +52,7 @@ namespace Bones
                 if (c is Enemy && !HaveHit.Contains(c))
                 {
                     Enemy e = c as Enemy;
-                    e.Damage(1);
+                    e.Damage(1, Angle);
                     HaveHit.Add(e);
                 }
             }

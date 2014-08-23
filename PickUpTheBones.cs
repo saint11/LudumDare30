@@ -9,7 +9,7 @@ using SFML.Window;
 
 namespace Bones
 {
-    public enum Tags { Actor, Solid, FX };
+    public enum Tags { Actor, Solid, FX, Player };
 
     class Bones
     {

@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Bones</RootNamespace>
-    <AssemblyName>JBlade</AssemblyName>
+    <AssemblyName>Bones</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>publish\</PublishUrl>
@@ -88,7 +88,9 @@
     <Compile Include="Mission\CameraController.cs" />
     <Compile Include="Mission\Enemy.cs" />
     <Compile Include="Mission\Ground.cs" />
+    <Compile Include="Mission\Hud.cs" />
     <Compile Include="Mission\Slash.cs" />
+    <Compile Include="Mission\Spawner.cs" />
     <Compile Include="World\Terrain.cs" />
     <None Include="App.config" />
     <Compile Include="Mission\Player.cs" />
