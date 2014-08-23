@@ -15,7 +15,7 @@
     <Origin x="16" y="32"/>
     <Animations>
       <Anim name="idle" delay="6" frames="0-5"/>
-      <Anim name="run" delay="6" frames="0-5"/>
+      <Anim name="run" delay="6" frames="8-13"/>
       <Anim name="attack" delay="5" frames="0-5"/>
     </Animations>
   </Sprite>

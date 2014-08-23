@@ -16,7 +16,7 @@ namespace Bones
 
         BasicMovement Movement = new BasicMovement(500, 500, 30);
         Spritemap<string> Sprite;
-        private float Side;
+        private float Side=1;
         private float Angle = 0;
 
         public int MaxHp=6;
@@ -48,7 +48,7 @@ namespace Bones
                 if (Math.Abs(Controls.Axis.X) > 0 || Math.Abs(Controls.Axis.Y) > 0)
                 {
                     Sprite.Play("run");
-                    Side = Sprite.ScaleX = Controls.Axis.X < 0 ? -1 : 1;
+                    Side = Controls.Axis.X < 0 ? -1 : 1;
                     Angle = (float)(Math.Atan2(-Controls.Axis.Y, Controls.Axis.X) * Util.RAD_TO_DEG);
                 }
                 else
@@ -91,6 +91,7 @@ namespace Bones
         public override void Update()
         {
             Layer = -(int)Y;
+            Sprite.ScaleX = Side;
         }
 
         public override void Prerender()

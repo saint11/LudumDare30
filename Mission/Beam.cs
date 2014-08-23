@@ -24,7 +24,10 @@ namespace Bones
             
             var vec = new Vector2(Sprite.ScaledWidth,0);
             vec =Util.Rotate(vec,angle);
-            AddCollider(new LineCollider(0, 0, vec.X, vec.Y));
+            AddCollider(new LineCollider(+4, +4, vec.X + 4, vec.Y + 4));
+            AddCollider(new LineCollider(-4, -4, vec.X - 4, vec.Y - 4));
+            AddCollider(new LineCollider(+4, -4, vec.X + 4, vec.Y - 4));
+            AddCollider(new LineCollider(-4, +4, vec.X - 4, vec.Y + 4));
             Layer = owner.Layer - 100;
 
             LifeSpan = 30;
@@ -41,7 +44,7 @@ namespace Bones
                 if (c is Enemy && !HaveHit.Contains(c))
                 {
                     Enemy e = c as Enemy;
-                    e.Damage(1, Angle);
+                    e.Damage(2, Angle);
                     HaveHit.Add(e);
                 }
             }
@@ -49,7 +52,7 @@ namespace Bones
 
         public override void Render()
         {
-            //Collider.Render();
+            //foreach(var c in Colliders) c.Render();
         }
     }
 }

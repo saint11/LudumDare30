@@ -27,9 +27,9 @@ namespace Bones
             Sprite = AddGraphic(SpriteData.GetAnimation("crab"));
             Sprite.Play("idle");
 
-            AddCollider(new BoxCollider(16, 8, (int)Tags.Actor));
+            AddCollider(new BoxCollider(16, 16, (int)Tags.Actor));
             Collider.OriginX = 8;
-            Collider.OriginY = 22;
+            Collider.OriginY = 28;
 
             Movement = AddComponent(new BasicMovement(300, 300, 10));
             Movement.AddCollision((int)Tags.Solid);

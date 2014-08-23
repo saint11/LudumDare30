@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
-<!-- $TexturePacker:SmartUpdate:e520cd2ecf761db5d71ee37ab8979a0d:85dd41e5ff964aa81b433b22e158482d:c3e4806e2e52c9c258a81d323f78c9c5$ -->
+<!-- $TexturePacker:SmartUpdate:48957836ca31a209d5a7896449699bf5:a0182a06a571f510277c072b00d38697:c3e4806e2e52c9c258a81d323f78c9c5$ -->
 <TextureAtlas imagePath="units.png">
     <SubTexture name="CrabDie" x="260" y="120" width="192" height="32"/>
     <SubTexture name="SpawnerIcon" x="454" y="36" width="32" height="32"/>
-    <SubTexture name="beam" x="2" y="422" width="128" height="48"/>
-    <SubTexture name="crab" x="2" y="260" width="256" height="160"/>
-    <SubTexture name="fugitive" x="260" y="86" width="192" height="32"/>
+    <SubTexture name="beam" x="260" y="154" width="128" height="48"/>
+    <SubTexture name="crab" x="2" y="518" width="256" height="160"/>
+    <SubTexture name="fugitive" x="2" y="260" width="256" height="256"/>
+    <SubTexture name="fugitiveRun" x="260" y="86" width="192" height="32"/>
     <SubTexture name="slash" x="260" y="36" width="192" height="48"/>
     <SubTexture name="soldier" x="2" y="2" width="256" height="256"/>
     <SubTexture name="spawner" x="260" y="2" width="224" height="32"/>
