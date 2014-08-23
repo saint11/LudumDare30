@@ -15,6 +15,8 @@ namespace Bones
 
         BasicMovement Movement = new BasicMovement(200, 200, 10);
         Spritemap<string> Sprite;
+        private float Side;
+        private float Angle = 0;
 
         public Player(int x, int y)
             : base(new Otter.Vector2(x, y))
@@ -40,20 +42,32 @@ namespace Bones
                 if (Math.Abs(Controls.Axis.X) > 0 || Math.Abs(Controls.Axis.Y) > 0)
                 {
                     Sprite.Play("run");
-                    Sprite.ScaleX = Controls.Axis.X < 0 ? -1 : 1;
+                    Side = Sprite.ScaleX = Controls.Axis.X < 0 ? -1 : 1;
+                    Angle = (float)(Math.Atan2(-Controls.Axis.Y, Controls.Axis.X) * Util.RAD_TO_DEG);
                 }
                 else
                 {
                     Sprite.Play("idle");
                 }
 
+                if (Controls.Attack.Pressed) SetState(Attacking);
                 yield return 0;
             }
         }
 
+        private IEnumerator Attacking()
+        {
+            Movement.Freeze = true;
+            Sprite.Play("attack");
+            Scene.Add(new Slash(X, Y-16, Angle, 0.8f, -0.8f*Side));
+            yield return 8;
+            Movement.Freeze = false;
+            yield return SetState(Normal);
+        }
+
         public override void Render()
         {
-            Collider.Render();
+            //Collider.Render();
         }
     }
 }

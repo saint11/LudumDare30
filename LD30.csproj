@@ -87,6 +87,7 @@
     <Compile Include="Items\StateEntity.cs" />
     <Compile Include="Mission\CameraController.cs" />
     <Compile Include="Mission\Ground.cs" />
+    <Compile Include="Mission\Slash.cs" />
     <Compile Include="World\Terrain.cs" />
     <None Include="App.config" />
     <Compile Include="Mission\Player.cs" />

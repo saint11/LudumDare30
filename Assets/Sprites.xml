@@ -7,6 +7,16 @@
     <Animations>
       <Anim name="idle" delay="8" frames="0-5"/>
       <Anim name="run" delay="5" frames="8-13"/>
+      <Anim name="attack" delay="5" frames="0,16-19"/>
+    </Animations>
+  </Sprite>
+
+<!--FX-->
+  <Sprite name="slash" atlas="units" texture="slash">
+    <Size width="48" height="48"/>
+    <Origin x="8" y="24"/>
+    <Animations>
+      <Anim name="attack" delay="3" loop="false" frames="0-3"/>
     </Animations>
   </Sprite>
 </Sprites>

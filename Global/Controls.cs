@@ -12,8 +12,8 @@ namespace Bones
     {
         static public Controls Instance;
 
-        public static Button CloseAttack = new Button();
-        public static Button RangedAttack = new Button();
+        public static Button Attack = new Button();
+        public static Button SpecialAttack = new Button();
         public static Button Back = new Button();
         public static Button Action = new Button();
         public static Button Inventory = new Button();
@@ -34,11 +34,11 @@ namespace Bones
             Axis.AddKey(Key.A, Direction.Left);
             Axis.AddAxis(JoyAxis.X, JoyAxis.Y, 1);
 
-            CloseAttack.AddKey(Key.LShift);
-            CloseAttack.AddAxisButton(AxisButton.ZMinus,1);
+            Attack.AddKey(Key.Z);
+            Attack.AddAxisButton(AxisButton.ZMinus,1);
 
-            RangedAttack.AddKey(Key.LControl);
-            RangedAttack.AddButton(5,1);
+            SpecialAttack.AddKey(Key.LControl);
+            SpecialAttack.AddButton(5,1);
 
             Back.AddKey(Key.Escape);
             Back.AddButton(6, 1);
@@ -63,8 +63,8 @@ namespace Bones
 
         internal static void Update()
         {
-            CloseAttack.UpdateFirst();
-            RangedAttack.UpdateFirst();
+            Attack.UpdateFirst();
+            SpecialAttack.UpdateFirst();
             Back.UpdateFirst();
             Action.UpdateFirst();
             Inventory.UpdateFirst();
