@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace Bones
 {
@@ -23,7 +24,7 @@ namespace Bones
         {
             Sprite = AddGraphic(SpriteData.GetAnimation("soldier"));
 
-            AddCollider(new BoxCollider(16, 16, (int)Tags.Actor));
+            AddCollider(new BoxCollider(16, 12, (int)Tags.Actor));
             Collider.OriginX = 8;
             Collider.OriginY = 16;
             
@@ -65,9 +66,25 @@ namespace Bones
             yield return SetState(Normal);
         }
 
+        public override void Update()
+        {
+            Layer = -(int)Y;
+        }
+
         public override void Render()
         {
             //Collider.Render();
+        }
+
+
+        public static Player CreateFromXML(Scene scene, XmlAttributeCollection xml)
+        {
+            Player n = new Player(int.Parse(xml["x"].Value), int.Parse(xml["y"].Value));
+
+            scene.Add(n);
+
+            (scene as Mission).Camera.SetTarget(n);
+            return n;
         }
     }
 }

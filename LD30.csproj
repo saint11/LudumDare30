@@ -86,6 +86,7 @@
     <Compile Include="Items\Coroutine.cs" />
     <Compile Include="Items\StateEntity.cs" />
     <Compile Include="Mission\CameraController.cs" />
+    <Compile Include="Mission\Enemy.cs" />
     <Compile Include="Mission\Ground.cs" />
     <Compile Include="Mission\Slash.cs" />
     <Compile Include="World\Terrain.cs" />

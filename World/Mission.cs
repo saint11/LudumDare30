@@ -11,25 +11,25 @@ namespace Bones
     {
         public new static Mission Instance;
         public Player Player;
-        private CameraController Camera;
+        public CameraController Camera;
 
         public Mission()
             : base()
         {
             Instance = this;
 
-            Add(new Ground());
+            Camera = Add(new CameraController());
+
+            Add(new Ground() { Layer = 10 });
             Add(new Sky() { Layer = -100 });
             //Add(new Terrain("test"));
-            Player = Add(new Player(80, 80));
 
             OgmoProject og = new OgmoProject(Bones.GAME_PATH + "Maps/Bones.oep", Bones.GAME_PATH + "Images/");
             og.RegisterTag((int)Tags.Solid, "solid");
+            og.BaseTileDepth = 100;
 
             og.LoadLevel(Bones.GAME_PATH + "Maps/test.oel", this);
 
-            Camera = Add(new CameraController());
-            Camera.SetTarget(Player);
         }
     }
 }

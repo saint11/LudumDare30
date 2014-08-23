@@ -10,6 +10,7 @@ namespace Bones
     public class Slash : Entity
     {
         private Spritemap<string> Sprite;
+        private List<Entity> HaveHit;
         private Vector2 Speed;
 
         public Slash(float x, float y, float angle,float sizeX,float sizeY)
@@ -23,14 +24,41 @@ namespace Bones
             Tween(Sprite, new { ScaleX = sizeX, ScaleY = sizeY },12).Ease(Ease.BackOut);
 
             Speed = new Vector2((float)Math.Cos(angle * Util.DEG_TO_RAD), -(float)Math.Sin(angle * Util.DEG_TO_RAD));
-
+            AddCollider(new BoxCollider(
+                (int)(Math.Abs(Sprite.ScaledWidth*1.5f)),
+                (int)(Math.Abs(Sprite.ScaledHeight*1.5f)), (int)Tags.FX));
+            Collider.CenterOrigin();
+            Collider.X += Speed.X * 8;
+            Collider.Y += Speed.Y * 8;
+            X += Speed.X*4;
+            Y += Speed.Y*4;
             LifeSpan = 12;
+
+            HaveHit = new List<Entity>();
         }
 
         public override void Update()
         {
             X += Speed.X*2;
             Y += Speed.Y*2;
+
+            Layer = -(int)Y - (int)(Math.Abs(Sprite.ScaledHeight));
+
+            List<Entity> col = CollideEntities(X,Y,(int)Tags.Actor);
+            foreach(var c in col)
+            {
+                if (c is Enemy && !HaveHit.Contains(c))
+                {
+                    Enemy e = c as Enemy;
+                    e.Damage(1);
+                    HaveHit.Add(e);
+                }
+            }
+        }
+
+        public override void Render()
+        {
+            //Collider.Render();
         }
     }
 }
